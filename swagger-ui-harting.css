@@ -1,0 +1,31 @@
+.swagger-ui .topbar {
+  padding: 10px 0;
+  background-color: #e5e5e5;
+}
+
+.swagger-ui .topbar .download-url-wrapper input[type=text] {
+  width: 100%;
+  margin: 0;
+  border: 2px solid #333;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.swagger-ui .topbar .download-url-wrapper .select-label select {
+  flex: 2;
+  width: 100%;
+  border: 2px solid #333;
+  outline: none;
+  box-shadow: none;
+}
+
+.swagger-ui .topbar .download-url-wrapper .download-url-button {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 4px 30px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background: #333;
+  font-family: sans-serif;
+  color: #fff;
+}

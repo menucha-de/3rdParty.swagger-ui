@@ -1,0 +1,24 @@
+name: Build package
+
+on:
+  workflow_dispatch:
+    inputs:
+      dist:
+        description: 'Distribution'
+        default: 'buster-staging'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v2
+      - name: Build
+        id: build
+        uses: peramic/actions/build@v1
+        with:
+          arch: all
+          dist: ${{ github.event.inputs.dist }}
+          script: ./mkapp
+          token: ${{ secrets.ACTIONS }}

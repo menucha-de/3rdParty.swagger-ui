@@ -1,0 +1,7 @@
+Source: swagger-ui
+Maintainer: HARTING IT_SD <opensource@HARTING.com>
+Build-Depends: debhelper
+
+Package: swagger-ui
+Architecture: all
+Description: Swagger UI

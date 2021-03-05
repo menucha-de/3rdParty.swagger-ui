@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+set -x
+
+env
+
+. /usr/share/mkapp/functions
+
+VERSION=$(head -1 debian/changelog | sed 's/.*(\(.*\)).*/\1/')
+wget -q $APT/pool/main/s/swagger-ui/swagger-ui_${VERSION%-*}.orig.tar.gz -O - | tar xz
+
+sed -i 's/"data:image[^"]*/"\/images\/harting_logo.png/' swagger-ui-bundle.js
+sed -i 's/"data:image[^"]*/"\/images\/harting_logo.png/' swagger-ui-standalone-preset.js
+sed -i '/^[ ]*<link rel="stylesheet" .*ui-harting.css" >$/d' index.html
+sed -i '/^[ ]*<link rel="stylesheet" .*ui.css" >$/a \ \ \ \ <link rel="stylesheet" type="text/css" href="./swagger-ui-harting.css" >' index.html
+sed -i "s/url: \"[^\"]*./url: window.location.protocol + \"\/\/\" + window.location.host + (new URL(window.location)).searchParams.get('path')/" index.html
+
+build -g
+
+if [ "$PUBLISH" ]; then
+  publish_debs
+fi
