@@ -1,5 +1,5 @@
-swagger-ui-harting.css /opt/havis-apps/www/openapi/
-index.html /opt/havis-apps/www/openapi/
-swagger-ui.css /opt/havis-apps/www/openapi/
-swagger-ui-bundle.js /opt/havis-apps/www/openapi/
-swagger-ui-standalone-preset.js /opt/havis-apps/www/openapi/
+swagger-ui-menucha.css /opt/menucha-de/www/openapi/
+index.html /opt/menucha-de/www/openapi/
+swagger-ui.css /opt/menucha-de/www/openapi/
+swagger-ui-bundle.js /opt/menucha-de/www/openapi/
+swagger-ui-standalone-preset.js /opt/menucha-de/www/openapi/

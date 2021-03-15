@@ -1,11 +1,5 @@
 swagger-ui (3.24.0-1) unstable; urgency=medium
  
-  * Adds link file to fix app folder
- 
- -- HARTING IT_SD <opensource@HARTING.com>  Wed, 29 Jul 2020 10:28:29 +0200
- 
-swagger-ui (3.24.0-0) unstable; urgency=medium
- 
   * Initialization
  
- -- HARTING IT_SD <opensource@HARTING.com>  Wed, 23 Oct 2019 17:04:24 +0200
+ -- Menucha Team <info@menucha.de>  Mon, 15 Mar 2021 15:49:03 +0100
